@@ -18,8 +18,7 @@ class MarsViewModelTest {
         val marsViewModel = MarsViewModel(marsPhotosRepository = FakeNetworkMarsPhotosRepository())
         Assert.assertEquals(
             MarsUiState.Success(
-                "Success: ${FakeDataSource.photosList.size} Mars " +
-                        "photos retrieved"
+                FakeDataSource.photosList
             ),
             marsViewModel.marsUiState
         )
